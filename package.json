@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "dev": "vike dev",
+    "build": "vike build",
+    "preview": "vike preview",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "vike": "^0.4.242",
+    "@vitejs/plugin-react": "^5.0.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "vike-react": "^0.6.9"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^7.1.10",
+    "eslint": "^9.37.0",
+    "@eslint/js": "^9.37.0",
+    "typescript-eslint": "^8.46.1",
+    "globals": "^16.4.0",
+    "eslint-plugin-react": "^7.37.5",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2"
+  },
+  "type": "module"
+}
