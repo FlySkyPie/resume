@@ -3,6 +3,8 @@ import { RpgProvider } from '@flyskypie/react-rpgui/rpg-provider';
 
 import logoUrl from "../assets/logo.svg";
 import { Link } from "../components/Link.js";
+import { CharacterProvider } from '../contexts/character';
+import { CharacterOverview } from '../widgets/CharacterOverview';
 
 import { Sidebar } from './Sidebar';
 import { Content } from './Content';
@@ -10,17 +12,16 @@ import './style.css';
 
 export default function LayoutDefault({ children }: { children: React.ReactNode }) {
   return (
-    <RpgProvider className='medium-container'>
-      <div className="flex-row">
-        <Sidebar>
-          <Logo />
-          <Link href="/">Welcome</Link>
-          <Link href="/todo">Todo</Link>
-          <Link href="/star-wars">Data Fetching</Link>
-        </Sidebar>
-        <Content>{children}</Content>
-      </div>
-    </RpgProvider>
+    <CharacterProvider>
+      <RpgProvider className='medium-container'>
+        <div className="flex-row">
+          <Sidebar>
+            <CharacterOverview />
+          </Sidebar>
+          <Content>{children}</Content>
+        </div>
+      </RpgProvider>
+    </CharacterProvider>
   );
 }
 
