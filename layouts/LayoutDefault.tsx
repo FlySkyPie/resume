@@ -1,12 +1,12 @@
 import { RpgProvider } from '@flyskypie/react-rpgui/rpg-provider';
-import '@flyskypie/react-rpgui/css';
+
 
 import logoUrl from "../assets/logo.svg";
 import { Link } from "../components/Link.js";
-import '../primitive-style/main.scss';
 
 import { Sidebar } from './Sidebar';
 import { Content } from './Content';
+import './style.css';
 
 export default function LayoutDefault({ children }: { children: React.ReactNode }) {
   return (
