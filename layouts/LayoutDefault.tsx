@@ -1,25 +1,29 @@
-import "./style.css";
+import { RpgProvider } from '@flyskypie/react-rpgui/rpg-provider';
+import { RpgButton } from '@flyskypie/react-rpgui/rpg-button';
+import { RpgBox } from '@flyskypie/react-rpgui/rpg-box';
+import '@flyskypie/react-rpgui/css';
+import '@flyskypie/react-rpgui/css/button';
+import '@flyskypie/react-rpgui/css/box';
 
 import logoUrl from "../assets/logo.svg";
 import { Link } from "../components/Link.js";
+import '../primitive-style/main.scss';
+
+import "./style.css";
 
 export default function LayoutDefault({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      style={{
-        display: "flex",
-        maxWidth: 900,
-        margin: "auto",
-      }}
-    >
-      <Sidebar>
-        <Logo />
-        <Link href="/">Welcome</Link>
-        <Link href="/todo">Todo</Link>
-        <Link href="/star-wars">Data Fetching</Link>
-      </Sidebar>
-      <Content>{children}</Content>
-    </div>
+    <RpgProvider className='medium-container'>
+      <div className="flex-row">
+        <Sidebar>
+          <Logo />
+          <Link href="/">Welcome</Link>
+          <Link href="/todo">Todo</Link>
+          <Link href="/star-wars">Data Fetching</Link>
+        </Sidebar>
+        <Content>{children}</Content>
+      </div>
+    </RpgProvider>
   );
 }
 

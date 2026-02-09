@@ -1,0 +1,145 @@
+@use "../base/variables";
+
+/**
+ * Helpers
+ */
+
+// Classic clearfix
+.clearfix::before,
+.clearfix::after {
+  content: ' ';
+  display: block;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+// Text alignment
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+// Display
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+// Vertical center
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Responsive images
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+// Display State
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+// Padding
+.no-padding-top {
+  padding-top: 0;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.padding-top {
+  padding-top: 2rem;
+}
+
+.padding-bottom {
+  padding-bottom: 2rem;
+}
+
+// Margins
+.no-margin-top {
+  margin-top: 0;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.margin-top {
+  margin-top: 2rem;
+}
+
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+// Backgrounds
+.alternate-background {
+  background: variables.$background-alt;
+  color: variables.$color-alt;
+
+  h1,h2,h3,h4,h5,h6 {
+    color: variables.$heading-font-color-alt;
+  }
+
+  .striped-table tbody tr:nth-child(odd) {
+    background-color: variables.$stripes-background-alt;
+    color: variables.$stripes-color-alt;
+  }
+  caption {
+    color: variables.$caption-alt;
+  }
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+// Screen reader text for accessibility
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}

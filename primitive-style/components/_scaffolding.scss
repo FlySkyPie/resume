@@ -1,0 +1,277 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+/**
+ * Scaffolding
+ */
+
+// HTML base
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: variables.$font-style variables.$font-variant variables.$font-weight #{variables.$font-size}/#{variables.$line-height} variables.$font-family;
+  font-size: variables.$font-size;
+}
+
+// Body base
+body {
+  color: variables.$font-color;
+  background: variables.$background;
+  font-size: variables.$body-font-size;
+}
+
+// Light-Dark base-setting
+
+@media (prefers-color-scheme: light) {
+  .dark-only {
+    display: none;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .light-only {
+     display: none;
+   }
+}
+:root {
+  // Critical for being able to use the light-dark() function
+  color-scheme: dark;
+}
+
+p,
+ol,
+ul,
+dl,
+table {
+  margin: 0 0 variables.$margins 0;
+}
+
+// Remove extra margin for nested lists
+ul li ul {
+  margin-bottom: 0;
+}
+
+ol li ol {
+  margin-bottom: 0;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: variables.$margins 0;
+  font-weight: variables.$heading-font-weight;
+  font-family: variables.$heading-font-family;
+  line-height: variables.$heading-line-height;
+  color: variables.$heading-font-color;
+
+  &:not(:first-child) {
+    margin: 1.5rem 0;
+  }
+}
+h6 {
+  margin: 0;
+  &:not(:first-child) {
+    margin: 0.5rem 0;
+  }
+}
+
+// Increased margin on additional headings
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child) {
+  margin-top: 2rem;
+}
+
+// Heading individual styles
+h1 {
+  font-size: variables.$h1-mobile;
+}
+
+h2 {
+  font-size: variables.$h2-mobile;
+}
+
+h3 {
+  font-size: variables.$h3-mobile;
+}
+
+h4 {
+  font-size: variables.$h4-mobile;
+}
+
+h5 {
+  font-size: variables.$h5-mobile;
+}
+
+h6 {
+  font-size: variables.$h6-mobile;
+}
+
+@include mixins.small-breakpoint {
+  // Increased margin on additional headings
+  h1:not(:first-child),
+  h2:not(:first-child),
+  h3:not(:first-child) {
+    margin-top: 2.5rem;
+  }
+
+  // Heading desktop individual styles
+  h1 {
+    font-size: variables.$h1;
+  }
+
+  h2 {
+    font-size: variables.$h2;
+  }
+
+  h3 {
+    font-size: variables.$h3;
+  }
+
+  h4 {
+    font-size: variables.$h4;
+  }
+
+  h5 {
+    font-size: variables.$h5;
+  }
+
+  h6 {
+    font-size: variables.$h6;
+  }
+}
+
+// Link styling
+a {
+  color: variables.$link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: variables.$link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+// Highlight
+mark {
+  background: variables.$highlight;
+  padding: 0 0.2rem;
+}
+
+// Blockquote
+blockquote {
+  margin: 0 0 variables.$margins 0;
+  border-left: variables.$bq-border;
+  padding: 0 1.5rem;
+  font-size: 1.5rem;
+
+  cite {
+    display: block;
+    margin-top: variables.$margins;
+    font-size: 1rem;
+    text-align: right;
+  }
+}
+
+// Code block styling
+pre {
+  border: 0;
+  border-radius: variables.$border-radius;
+  background: variables.$code-background;
+  padding: 1rem;
+  tab-size: 2;
+  color: variables.$code-color;
+  font-family: variables.$code-family;
+  font-size: variables.$code-size;
+  margin: 0 0 variables.$margins 0;
+
+  code {
+    font-family: variables.$code-family;
+    line-height: 1.2;
+  }
+}
+
+// Keyboard input
+kbd {
+  background-color: variables.$very-light-gray;
+  border: 1px solid variables.$light-gray;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px variables.$white inset;
+  color: variables.$very-dark-gray;
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
+  text-shadow: 0 1px 0 #fff;
+}
+
+// Inline code styling
+:not(pre) > code {
+  color: variables.$code-color;
+  background: variables.$code-background;
+  font-family: variables.$code-family;
+  font-size: variables.$code-size;
+  padding: 0 0.2rem;
+  border: variables.$borders;
+  border-radius: variables.$border-radius;
+}
+
+// Line break
+hr {
+  height: 0;
+  border: 0;
+  border-top: variables.$borders;
+}
+
+// Definition list
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+}
+
+// Full container
+.full-container {
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+// Container
+.container {
+  max-width: variables.$large;
+  padding: 0 variables.$padding;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Small container
+.small-container {
+  @extend .container;
+  max-width: variables.$small;
+}
+
+// Medium container
+.medium-container {
+  @extend .container;
+  max-width: variables.$medium;
+}
+
+// Content
+.content-section {
+  padding: variables.$content-padding-mobile;
+}
+
+@include mixins.small-breakpoint {
+  .content-section {
+    padding: variables.$content-padding;
+  }
+}
