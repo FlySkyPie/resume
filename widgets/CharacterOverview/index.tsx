@@ -15,6 +15,10 @@ import { CPlusPlusIcon } from '../../icons/CPlusPlus';
 import { LinuxIcon } from '../../icons/Linux';
 import { KubernetesIcon } from '../../icons/Kubernetes';
 import { DockerIcon } from '../../icons/Docker';
+import { TerraformIcon } from '../../icons/Terraform';
+import { GitIcon } from '../../icons/Git';
+import { PhpIcon } from '../../icons/Php';
+import { NextJsIcon } from '../../icons/NextJs';
 
 export const CharacterOverview: React.FC = () => {
     const { character, toggle } = useCharacter();
@@ -94,7 +98,19 @@ export const CharacterOverview: React.FC = () => {
                         <KubernetesIcon />
                     </RpgSlot>
                     <RpgSlot tooltip="Docker">
-                        <DockerIcon size={54}/>
+                        <DockerIcon size={54} />
+                    </RpgSlot>
+                    <RpgSlot tooltip="Terraform">
+                        <TerraformIcon />
+                    </RpgSlot>
+                    <RpgSlot tooltip="Git">
+                        <GitIcon />
+                    </RpgSlot>
+                    <RpgSlot tooltip="PHP">
+                        <PhpIcon />
+                    </RpgSlot>
+                    <RpgSlot tooltip="Next.js">
+                        <NextJsIcon />
                     </RpgSlot>
                 </div>
             </div>
