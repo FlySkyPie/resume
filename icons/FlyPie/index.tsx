@@ -1,4 +1,4 @@
-import headUrl from './head.png';
+import headUrl from '../../assets/head.png';
 
 export interface FlyPieIconProps {
     size?: number;

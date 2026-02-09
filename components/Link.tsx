@@ -1,11 +1,15 @@
-import { usePageContext } from "vike-react/usePageContext";
+export interface LinkProps {
+  href: string;
+  children: React.ReactNode;
+};
 
-export function Link({ href, children }: { href: string; children: string }) {
+export function Link({ href, children }: LinkProps) {
   if (!href.startsWith('/')) throw new Error('Link href should start with /')
   href = import.meta.env.BASE_URL + href
   href = normalize(href)
   return <a href={href}>{children}</a>
-}
+};
+
 function normalize(url: string) {
   return '/' + url.split('/').filter(Boolean).join('/')
-}
+};

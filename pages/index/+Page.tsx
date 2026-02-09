@@ -1,16 +1,17 @@
-import { Counter } from "./Counter.js";
+import { Character } from "../../constants/character.js";
+import { useCharacter } from "../../contexts/character.js";
+
+import { FlyResume } from "./FlyResume/index.js";
+import { WeiResume } from "./WeiResume/index.js";
 
 export default function Page() {
+  const { character } = useCharacter();
+
   return (
     <>
-      <h1>My Vike app</h1>
-      This page is:
-      <ul>
-        <li>Rendered to HTML.</li>
-        <li>
-          Interactive. <Counter />
-        </li>
-      </ul>
+      {character === Character.FlyPie ?
+        <FlyResume /> :
+        <WeiResume />}
     </>
   );
 }
