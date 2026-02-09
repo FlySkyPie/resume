@@ -11,6 +11,10 @@ import { TypescriptIcon } from '../../icons/Typescript';
 import { NodeIcon } from '../../icons/Node';
 import { useCharacter } from '../../contexts/character';
 import { BookIcon } from '../../icons/Book';
+import { CPlusPlusIcon } from '../../icons/CPlusPlus';
+import { LinuxIcon } from '../../icons/Linux';
+import { KubernetesIcon } from '../../icons/Kubernetes';
+import { DockerIcon } from '../../icons/Docker';
 
 export const CharacterOverview: React.FC = () => {
     const { character, toggle } = useCharacter();
@@ -78,7 +82,19 @@ export const CharacterOverview: React.FC = () => {
                         <ReactIcon />
                     </RpgSlot>
                     <RpgSlot tooltip="Python">
-                        <PythonIcon />
+                        <PythonIcon size={44} />
+                    </RpgSlot>
+                    <RpgSlot tooltip="C++">
+                        <CPlusPlusIcon />
+                    </RpgSlot>
+                    <RpgSlot tooltip="Linux">
+                        <LinuxIcon />
+                    </RpgSlot>
+                    <RpgSlot tooltip="Kubernetes">
+                        <KubernetesIcon />
+                    </RpgSlot>
+                    <RpgSlot tooltip="Docker">
+                        <DockerIcon size={54}/>
                     </RpgSlot>
                 </div>
             </div>
