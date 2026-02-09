@@ -10,6 +10,7 @@ import { JavascriptIcon } from '../../icons/Javascript';
 import { TypescriptIcon } from '../../icons/Typescript';
 import { NodeIcon } from '../../icons/Node';
 import { useCharacter } from '../../contexts/character';
+import { BookIcon } from '../../icons/Book';
 
 export const CharacterOverview: React.FC = () => {
     const { character, toggle } = useCharacter();
@@ -27,8 +28,6 @@ export const CharacterOverview: React.FC = () => {
                     </RpgButton>
 
                 </div>
-
-
             </div>
             <hr />
             <div style={{ padding: '0 1rem' }}>
@@ -49,6 +48,15 @@ export const CharacterOverview: React.FC = () => {
                             rel="noopener noreferrer"
                             href='https://flyskypie.github.io/'>
                             <FlyPieIcon size={44} />
+                        </a>
+                    </RpgSlot>
+
+                    <RpgSlot tooltip="Side Project 維基">
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href='https://flyskypie.github.io/sideprojects-wiki/'>
+                            <BookIcon size={48} />
                         </a>
                     </RpgSlot>
                 </div>

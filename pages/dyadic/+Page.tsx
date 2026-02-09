@@ -4,7 +4,7 @@ export default function Page() {
 
   return (
     <>
-      <h2 style={{ fontSize: "250%" }}>
+      <h2 style={{ fontSize: "150%" }}>
         Dyadic
       </h2>
       <hr className="golden" />

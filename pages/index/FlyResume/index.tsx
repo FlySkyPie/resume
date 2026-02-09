@@ -11,11 +11,11 @@ export const FlyResume: React.FC = () => {
                 FlyPie
             </h1>
             <hr className="golden" />
-            <p>
+            <div>
                 <RpgBox type='golden'>
                     FlyPie 代表著業餘時間操作的角色。
                 </RpgBox>
-            </p>
+            </div>
         </>
     );
 };

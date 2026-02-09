@@ -11,11 +11,10 @@ export const WeiResume: React.FC = () => {
                 Wei Ji
             </h1>
             <hr className="golden" />
-            <p>
-                <RpgBox type='golden'>
-                    Wei Ji 代表著工作時操作的角色。
-                </RpgBox>
-            </p>
+            <RpgBox type='golden'>
+                Wei Ji 代表著工作時操作的角色。
+            </RpgBox>
+            <br />
             <RpgBox type='grey'>
                 <h1 style={{ fontSize: "150%" }}>工作經歷</h1>
                 <hr />
@@ -31,15 +30,15 @@ export const WeiResume: React.FC = () => {
                     {" "} (2020~2025)
                 </p>
                 <p className="text-right">Software Engineer/TPO</p>
-                <p className="text-center">
+                <div className="text-center">
                     <Link href='/dyadic'>
                         <RpgButton type='golden' style={{ lineHeight: '50px' }}>
                             查看細節
                         </RpgButton>
                     </Link>
-                </p>
+                </div>
             </RpgBox>
-
+            <br />
             <RpgBox type='grey'>
                 <h1 style={{ fontSize: "150%" }}>學歷</h1>
                 <ul>

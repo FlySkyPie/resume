@@ -12,8 +12,8 @@ export default {
   Layout,
 
   // https://vike.dev/head-tags
-  title: "Wei's Profile",
-  description: "Demo showcasing Vike",
+  title: "Wei/FlyPie's Profile",
+  description: "Wei/FlyPie's Resume and Curriculum Vitae",
 
   extends: [vikeReact],
 } satisfies Config;
