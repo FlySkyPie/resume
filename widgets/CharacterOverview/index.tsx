@@ -19,6 +19,11 @@ import { TerraformIcon } from '../../icons/Terraform';
 import { GitIcon } from '../../icons/Git';
 import { PhpIcon } from '../../icons/Php';
 import { NextJsIcon } from '../../icons/NextJs';
+import { KotlinIcon } from '../../icons/Kotlin';
+import { HtmlIcon } from '../../icons/Html';
+import { CssIcon } from '../../icons/Css';
+import { ShellIcon } from '../../icons/Shell';
+import { LaravelIcon } from '../../icons/Laravel';
 
 export const CharacterOverview: React.FC = () => {
     const { character, toggle } = useCharacter();
@@ -111,6 +116,21 @@ export const CharacterOverview: React.FC = () => {
                     </RpgSlot>
                     <RpgSlot tooltip="Next.js">
                         <NextJsIcon />
+                    </RpgSlot>
+                    <RpgSlot tooltip="Kotlin">
+                        <KotlinIcon size={38} />
+                    </RpgSlot>
+                    <RpgSlot tooltip="HTML">
+                        <HtmlIcon size={40} />
+                    </RpgSlot>
+                    <RpgSlot tooltip="CSS">
+                        <CssIcon size={40} />
+                    </RpgSlot>
+                    <RpgSlot tooltip="Bash/Shell">
+                        <ShellIcon size={40} />
+                    </RpgSlot>
+                    <RpgSlot tooltip="Laravel">
+                        <LaravelIcon size={40} />
                     </RpgSlot>
                 </div>
             </div>
