@@ -5,7 +5,7 @@ import { defineConfig } from "vite";
 export default defineConfig(({ command }) => {
   const base = command === 'serve' ?
     undefined :
-    '/client/';
+    '/resume/';
   return {
     plugins: [vike(), react()],
     build: {
