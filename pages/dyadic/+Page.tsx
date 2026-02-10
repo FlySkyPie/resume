@@ -154,7 +154,7 @@ export default function Page() {
             食品公司
             <ul>
               <li>產品概述：線上商店</li>
-              <li>負責區塊：打雜</li>
+              <li>負責區塊：後台設定</li>
               <li>Techstack： Shopify</li>
             </ul>
           </li>
@@ -202,7 +202,7 @@ export default function Page() {
             代號-A
             <ul>
               <li>產品概述：███ （公司內部專案）</li>
-              <li>負責區塊：前後端、架構規劃、打雜</li>
+              <li>負責區塊：前後端、架構規劃</li>
               <li>Techstack： Keycloak, OpenFGA, Zod</li>
             </ul>
           </li>
