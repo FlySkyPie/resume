@@ -21,3 +21,22 @@ body {
     font-family: "Cubic_11", "Press Start 2P", system-ui !important;
     font-size  : 1.4rem;
 }
+
+
+.rpgui-content {
+    h3 {
+        text-decoration: unset;
+    }
+
+    h4 {
+        text-decoration: unset;
+    }
+
+    ul {
+        padding-left: 0.5rem;
+    }
+
+    li {
+        line-height: 1.5rem;
+    }
+}
