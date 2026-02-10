@@ -5,7 +5,7 @@ import wikiPreviewUrl from './tiddlywiki.webp';
 export const OtherResources: React.FC = () => {
     return (
         <>
-            <h1 style={{ fontSize: "150%" }}>其他資源</h1>
+            <h2 style={{ fontSize: "150%" }}>其他資源</h2>
             <p>想了更了解 FlyPie 嗎?</p>
 
 

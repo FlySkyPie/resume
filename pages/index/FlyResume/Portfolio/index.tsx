@@ -7,7 +7,7 @@ import ariadneImgUrl from './ariadne-gis.webp';
 export const Portfolio: React.FC = () => {
     return (
         <>
-            <h1 style={{ fontSize: "150%" }}>精選作品集</h1>
+            <h2 style={{ fontSize: "150%" }}>精選作品集</h2>
             <hr />
 
             <h4 style={{ margin: 0 }}>Ariadne GIS  (2025)</h4>

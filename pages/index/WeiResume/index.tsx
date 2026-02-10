@@ -17,7 +17,6 @@ export const WeiResume: React.FC = () => {
             <br />
             <RpgBox type='grey'>
                 <h1 style={{ fontSize: "150%" }}>工作經歷</h1>
-                <hr />
                 <p>
                     <a
                         target="_blank"

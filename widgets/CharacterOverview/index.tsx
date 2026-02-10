@@ -24,6 +24,7 @@ import { HtmlIcon } from '../../icons/Html';
 import { CssIcon } from '../../icons/Css';
 import { ShellIcon } from '../../icons/Shell';
 import { LaravelIcon } from '../../icons/Laravel';
+import { Link } from '../../components/Link';
 
 export const CharacterOverview: React.FC = () => {
     const { character, toggle } = useCharacter();
@@ -76,7 +77,12 @@ export const CharacterOverview: React.FC = () => {
             </div>
             <hr />
             <div style={{ padding: '0 1rem' }}>
-                <h4 style={{ textDecoration: 'none' }}>技能</h4>
+
+                <h4 style={{ textDecoration: 'none' }}>
+                    <Link href='/skills'>
+                        技能
+                    </Link>
+                </h4>
                 <div className="flex-row" style={{ gap: '12px' }}>
                     <RpgSlot tooltip="Javascript">
                         <JavascriptIcon />
