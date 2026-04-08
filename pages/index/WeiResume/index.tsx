@@ -44,6 +44,11 @@ export const WeiResume: React.FC = () => {
                     <li>國立虎尾科技大學 (2015~2020)
                         <ul>
                             <li>材料科學與工程系</li>
+                            <li>
+                                <Link href='/project-furnace'>
+                                    畢業專題
+                                </Link>
+                            </li>
                         </ul>
                     </li>
 
